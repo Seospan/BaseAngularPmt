@@ -23,7 +23,7 @@ export const homeRoutes : Routes = [
         {
             path: 'dashboard',
             canActivateChild: [AuthGuard],
-            loadChildren: '../dashboard/dashboard.module#DashboardModule'
+            loadChildren: './dashboard/dashboard.module#DashboardModule'
         },
     ]
 },
