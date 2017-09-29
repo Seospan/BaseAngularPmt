@@ -5,7 +5,10 @@ import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { CovalentCoreModule } from '@covalent/core';
+//import { CovalentCoreModule } from '@covalent/core';
+import { CovalentHttpModule } from '@covalent/http';
+import { CovalentHighlightModule } from '@covalent/highlight';
+import { CovalentMarkdownModule } from '@covalent/markdown';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
@@ -21,6 +24,7 @@ import { AuthenticationService } from './services/authentication.service'
 import { AlertService } from './services/alert.service';
 import { AlertComponent } from './alert/alert.component'
 
+import { SharedModule } from './shared.module'
 
 @NgModule({
   declarations: [
@@ -34,10 +38,19 @@ import { AlertComponent } from './alert/alert.component'
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    CovalentCoreModule.forRoot(),
-    MaterialModule,
+    //CovalentCoreModule.forRoot(),
     HomeModule,
     AppRoutingModule,
+    CovalentHttpModule.forRoot(),
+    CovalentHighlightModule,
+    CovalentMarkdownModule,
+    /**/
+    CovalentHttpModule.forRoot(),
+    CovalentHighlightModule,
+    CovalentMarkdownModule,
+    /**/
+    MaterialModule,
+    SharedModule,
   ],
   providers: [
       AuthenticationService,
